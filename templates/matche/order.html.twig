@@ -1,0 +1,33 @@
+{{form(search)}}
+	<hr>
+	<h1>List order with nbSpectateurs</h1>
+	<hr>
+	{% for m in matches %}
+		<h2>matche
+			{{m.numeroMatche}}</h2>
+		Numero :
+		{{m.numeroMatche}}
+		date :
+		{{m.dateM|date ("d/m/y")}}
+		nombre :
+		{{m.nbSpectateurs}}
+		stade :
+		{{m.stade}}
+	{% endfor %}
+
+	<br>
+	<hr>
+	{% for m in order %}
+		<h2>matche
+			{{m.numeroMatche}}</h2>
+		Numero :
+		{{m.numeroMatche}}
+		date :
+		{{m.dateM|date ("d/m/y")}}
+		nombre :
+		{{m.nbSpectateurs}}
+		stade :
+		{{m.stade}}
+	{% endfor %}
+
+	<br>

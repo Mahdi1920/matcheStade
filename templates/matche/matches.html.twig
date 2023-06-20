@@ -1,0 +1,16 @@
+<table border="3">
+	<tr>
+		<th>Numero</th>
+		<th>date</th>
+		<th>nombre</th>
+
+	</tr>
+	{% for m in matches %}
+		<tr>
+			<td>{{m.numeroMatche}}</td>
+			<td>{{m.dateM|date ("d/m/y")}}</td>
+			<td>{{m.nbSpectateurs}}</td>
+		</tr>
+	{% endfor %}
+
+</table>

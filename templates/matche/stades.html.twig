@@ -1,0 +1,21 @@
+<table border="3">
+	<tr>
+		<th>Id</th>
+		<th>nom</th>
+		<th>ville</th>
+
+	</tr>
+	{% for s in show %}
+		<tr>
+			<td>{{s.id}}</td>
+			<td>{{s.nom}}</td>
+			<td>{{s.ville}}</td>
+			<td>
+				<form action="{{path('app_delete',{'id':s.id})}}">
+					<button type="submit">Delete</button>
+				</form>
+			</td>
+		</tr>
+	{% endfor %}
+
+</table>
